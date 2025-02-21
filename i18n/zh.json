@@ -1,0 +1,113 @@
+{
+  "language": "中文",
+  "modelThinking": "思考中...",
+  "modelThinkingComplete": "思考完毕",
+  "invalidStructuredOutput": "模型返回的内容无效或不完整，无法解析。请尝试换一个更大或者更“聪明”的模型。",
+  "index": {
+    "projectDescription": "Deep Research 是 {0} 的可视化 UI，可以让 AI 根据特定问题联网搜索并自行深挖，并输出研究报告。\n本项目可以流式传输 AI 的回答来实时反馈，并使用树状结构可视化搜索过程。\n全部 API 请求都在浏览器本地完成。",
+    "missingConfigTitle": "需要配置 API",
+    "missingConfigDescription": "本项目需要您自备 AI 和联网搜索服务的配置 (Bring Your Own Key)"
+  },
+  "settings": {
+    "title": "设置",
+    "disclaimer": "所有设置本地保存",
+    "save": "保存",
+    "ai": {
+      "provider": "AI 服务",
+      "apiKey": "API 密钥",
+      "apiBase": "API Base URL",
+      "model": "模型名称",
+      "contextSize": "上下文长度",
+      "contextSizeHelp": "发送给模型的最大 token 数量，不能超过模型本身支持的上下文长度。",
+      "providers": {
+        "openaiCompatible": {
+          "title": "OpenAI Compatible",
+          "description": "任意兼容 OpenAI 接口格式的供应商。\n注：为了改进兼容性，部分供应商有单独的选项，请展开查看。"
+        },
+        "siliconflow": {
+          "title": "SiliconFlow 硅基流动",
+          "description": "注册赠送 ¥14 元免费额度。在 {0} 生成一个 API key。"
+        }
+      }
+    },
+    "webSearch": {
+      "provider": "联网搜索服务",
+      "apiKey": "API 密钥",
+      "queryLanguage": "使用语言",
+      "queryLanguageHelp": "修改搜索词的语言。如果你想获取不同的搜索结果（比如查询高质量的英文资料），可以在这里修改。\nAI 模型在总结的时候仍然会使用当前网页的语言。",
+      "providers": {
+        "firecrawl": {
+          "help": "如果你使用的是官方服务，请在 {0} 获取 API key。"
+        },
+        "tavily": {
+          "help": "和 Firecrawl 类似，不过提供了每月 1000 次免费搜索。在 {0} 获取一个 API key。",
+          "advancedSearchHelp": "获得更高质量的搜索结果。每次多消耗一个搜索点数 (credit)。",
+          "searchTopic": "搜索领域",
+          "advancedSearch": "高质量搜索",
+          "searchTopicHelp": "搜索特定领域的信息，获得更精确的结果。默认为“通用” (general)。"
+        }
+      },
+      "concurrencyLimit": "并发数",
+      "concurrencyLimitHelp": "限制同时进行的搜索数量。这样可以避免被 API 服务限流，导致请求失败。",
+      "apiBase": "API Base URL"
+    }
+  },
+  "researchTopic": {
+    "title": "1. 研究主题",
+    "inputTitle": "研究主题",
+    "placeholder": "任何你想了解的内容...",
+    "numOfQuestions": "问题数量",
+    "numOfQuestionsHelp": "AI 询问你的问题数量。这些问题能让 AI 更好地了解你的研究目标。",
+    "depth": "研究深度 (Depth)",
+    "depthHelp": "联网搜索的迭代轮数。",
+    "breadth": "研究广度 (Breadth)",
+    "breadthHelp": "第一次迭代中的搜索次数。后续每轮迭代的搜索次数为上一轮的一半。",
+    "start": "开始研究",
+    "researching": "研究中..."
+  },
+  "modelFeedback": {
+    "title": "2. 模型反馈",
+    "description": "AI 将会跟你确认一些细节，帮助你明确研究方向。",
+    "waiting": "等待模型反馈...",
+    "submit": "提交回答",
+    "noQuestions": "模型没有返回任何问题，请重试",
+    "error": "获取反馈失败：{0}"
+  },
+  "webBrowsing": {
+    "title": "3. 联网搜索",
+    "description": "AI 将根据上述信息联网搜索并自动迭代，直到迭代次数 = depth。",
+    "clickToView": "点击下面的节点查看搜索详情。",
+    "nodeDetails": "节点详情",
+    "startNode": {
+      "description": "这是本次研究的起点"
+    },
+    "researchGoal": "研究目标",
+    "visitedUrls": "访问网址",
+    "learnings": "结论",
+    "generating": "生成中...",
+    "nodeFailed": "搜索失败",
+    "nodeFailedToast": "搜索步骤 “{label}” 失败",
+    "followUpQuestions": "后续问题"
+  },
+  "researchReport": {
+    "title": "4. 研究报告",
+    "exportPdf": "导出 PDF",
+    "exportMarkdown": "导出 Markdown",
+    "sources": "来源",
+    "waiting": "等待报告...",
+    "generating": "生成报告中...",
+    "error": "生成报告失败：{0}",
+    "downloadingFonts": "正在下载必要字体，可能需要较长时间...",
+    "downloadFontFailed": "下载字体失败",
+    "regenerate": "重新生成"
+  },
+  "error": {
+    "requestBlockedByCORS": "当前 API 服务可能不允许接口跨域，请换一个服务试试，或者向服务方反馈。"
+  },
+  "autoUpdate": {
+    "newVersionTitle": "发现新版本：{0}",
+    "newVersionDescription": "注：如果您使用的是自部署页面，请使用最新代码重新部署，即可获得最新功能和 bug 修复。",
+    "refresh": "刷新",
+    "dismiss": "忽略"
+  }
+}

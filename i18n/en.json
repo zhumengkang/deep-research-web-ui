@@ -1,0 +1,113 @@
+{
+  "language": "English",
+  "modelThinking": "Thinking...",
+  "modelThinkingComplete": "Thinking complete",
+  "invalidStructuredOutput": "The model returned content which is incomplete or invalid and cannot be parsed. Try using a bigger or \"smarter\" model.",
+  "index": {
+    "projectDescription": "This is a web UI for {0} that allows AI to search online and dig deeper on its own based on specific questions, and then output a research report.\nThis project features streaming AI responses for realtime feedback, and visualization of the research process using a tree structure.\nAll API requests are directly sent from your browser. No remote data stored.",
+    "missingConfigTitle": "Config not set",
+    "missingConfigDescription": "This project requires you to bring your own API keys."
+  },
+  "settings": {
+    "title": "Settings",
+    "disclaimer": "Settings are stored locally in your browser.",
+    "save": "Save",
+    "ai": {
+      "provider": "AI Provider",
+      "apiKey": "API Key",
+      "apiBase": "API Base URL",
+      "model": "Model",
+      "contextSize": "Context Length",
+      "contextSizeHelp": "The maximum number of tokens that will be sent to the model. Can't be bigger than the model's context length.",
+      "providers": {
+        "openaiCompatible": {
+          "title": "OpenAI Compatible",
+          "description": "Every provider that is compatible with the OpenAI API. Note: Some providers have their own options for better performance."
+        },
+        "siliconflow": {
+          "title": "SiliconFlow",
+          "description": "Offers ¥14 free credits on register. Get one API key at {0}."
+        }
+      }
+    },
+    "webSearch": {
+      "provider": "Web Search Provider",
+      "apiKey": "API Key",
+      "queryLanguage": "Query Language",
+      "queryLanguageHelp": "The language of the search query. Useful if you want to get search results in a different language.\nWhen writing conclusions, the AI model will still use the language same as the web UI.",
+      "providers": {
+        "tavily": {
+          "help": "Similar to Firecrawl, but provides 1000 free credits / month. Get one API key at {0}.",
+          "advancedSearch": "Advanced Search",
+          "advancedSearchHelp": "Get higher quality search results. Costs 1 extra credit each time.",
+          "searchTopic": "Search Topic",
+          "searchTopicHelp": "Optimize the search for the selected topic with tailored and curated information. Defaults to 'general'."
+        },
+        "firecrawl": {
+          "help": "Get one API key at {0} if you are using the official service."
+        }
+      },
+      "concurrencyLimitHelp": "Limit the concurrent search tasks. This is useful to avoid overloading the search provider and causing requests to fail.",
+      "concurrencyLimit": "Concurrency Limit",
+      "apiBase": "API Base URL"
+    }
+  },
+  "researchTopic": {
+    "title": "1. Research Topic",
+    "inputTitle": "Research Topic",
+    "placeholder": "Whatever you want to research...",
+    "numOfQuestions": "Number of Questions",
+    "numOfQuestionsHelp": "The number of follow-up questions to clarify.",
+    "depth": "Depth",
+    "depthHelp": "Number of iterations.",
+    "breadth": "Breadth",
+    "breadthHelp": "Number of searches in the first iteration. The search width of each iteration is half of the previous one.",
+    "start": "Start Research",
+    "researching": "Researching..."
+  },
+  "modelFeedback": {
+    "title": "2. Model Feedback",
+    "description": "The AI will ask you some follow up questions to help you clarify the research direction.",
+    "waiting": "Waiting for model feedback...",
+    "submit": "Submit Answer",
+    "error": "Error getting feedback: {0}",
+    "noQuestions": "The model did not return any follow-up questions."
+  },
+  "webBrowsing": {
+    "title": "3. Web Browsing",
+    "description": "The AI will then search the web based on our research goal, and iterate until the depth is reached.",
+    "clickToView": "Click a child node to view details.",
+    "nodeDetails": "Node Details",
+    "startNode": {
+      "description": "This is the beginning of your deep research journey!"
+    },
+    "researchGoal": "Research Goal",
+    "visitedUrls": "Visited URLs",
+    "learnings": "Learnings",
+    "generating": "Generating...",
+    "nodeFailed": "Search failed",
+    "nodeFailedToast": "Search node \"{label}\" failed",
+    "followUpQuestions": "Follow-up Questions"
+  },
+  "researchReport": {
+    "title": "4. Research Report",
+    "exportPdf": "Export PDF",
+    "exportMarkdown": "Export Markdown",
+    "sources": "Sources",
+    "waiting": "Waiting for report...",
+    "generating": "Generating report...",
+    "error": "Generate report failed: {0}",
+    "downloadingFonts": "Downloading necessary fonts, this may take some time...",
+    "downloadFontFailed": "Download font failed",
+    "regenerate": "Regenerate"
+  },
+  "error": {
+    "requestBlockedByCORS": "The current API provider may not allow cross-origin requests. Please try a different service provider or contact the provider for support."
+  },
+  "autoUpdate": {
+    "newVersionTitle": "New version available: {0}",
+    "newVersionDescription": "Note: If you are using a self-hosted version, please re-deploy to get new features and bug fixes.",
+    "refresh": "Refresh page",
+    "dismiss": "Dismiss"
+  }
+}
